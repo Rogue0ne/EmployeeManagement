@@ -1,0 +1,26 @@
+﻿body {
+}
+
+.companyLogo{
+    display:inline-block;
+    background:url(../images/Logo---Top.png) no-repeat;
+    width:200px;
+    height:150px;
+    padding-left:180px;
+}
+
+.app_title_wrapper{
+    font-weight:bold;
+    font-size:medium;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding:3px 3px 3px 3px;
+
+}
+
+.head_img1_wrapper{
+
+}
+
+
+
+

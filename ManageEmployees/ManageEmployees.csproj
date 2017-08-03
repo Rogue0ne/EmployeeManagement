@@ -25,7 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>2.0</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -97,12 +97,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bs-config.json" />
+    <Content Include="Content\images\Logo---Top.png" />
+    <Content Include="Content\stylesheets\site.css" />
     <Content Include="package.json" />
     <Content Include="packages.config" />
     <None Include="Scripts\_references.js" />
     <Content Include="karma-test-shim.js" />
     <Content Include="karma.conf.js" />
-    <Content Include="src\app\home\home.html" />
+    <Content Include="src\app\home\components\templates\home.html" />
+    <Content Include="src\app\shared\templates\app.breadcrumb.template.html" />
+    <Content Include="src\app\shared\templates\app.footer.template.html" />
+    <Content Include="src\app\shared\templates\app.header.template.html" />
     <Content Include="src\index.html" />
     <Content Include="src\systemjs-angular-loader.js" />
     <Content Include="src\systemjs.config.js" />
@@ -122,16 +127,22 @@
   <ItemGroup>
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
-    <TypeScriptCompile Include="src\app\home\home.component.ts" />
+    <TypeScriptCompile Include="src\app\home\components\home.component.ts" />
+    <TypeScriptCompile Include="src\app\home\components\home.routing.module.ts" />
+    <TypeScriptCompile Include="src\app\locations\components\location.component.ts" />
+    <TypeScriptCompile Include="src\app\shared\app.breadcrumb.ts" />
+    <TypeScriptCompile Include="src\app\shared\app.common.services.ts" />
+    <TypeScriptCompile Include="src\app\shared\app.footer.component.ts" />
+    <TypeScriptCompile Include="src\app\shared\app.header.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\app\departments\" />
-    <Folder Include="src\app\employees\" />
-    <Folder Include="src\app\locations\" />
+    <Folder Include="src\app\departments\components\templates\" />
+    <Folder Include="src\app\employees\components\templates\" />
+    <Folder Include="src\app\locations\components\templates\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
