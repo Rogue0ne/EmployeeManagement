@@ -1,4 +1,5 @@
-﻿import { Component } from '@angular/core';
+﻿import { Component, Input, ElementRef } from '@angular/core';
+import { AppCommonServices } from '../../shared/app.common.services';
 
 @Component({
     selector: 'my-app',
@@ -6,5 +7,6 @@
 })
 
 export class HomeComponent {
-  
+    constructor(private elementRef: ElementRef, private commonService: AppCommonServices) { }
+    username: string = this.elementRef.nativeElement.getAttribute('username')
 }
