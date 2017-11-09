@@ -1,0 +1,13 @@
+﻿<div id="messageModalDialog" class="modal fade" role="dialog" *ngIf="messageflag">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h4 class="modal-title">Manage Employees</h4>
+        </div>
+        <div class="modal-body" style="text-align:center;height:50px;">
+            <span style="text-align:center">{{message}}</span>
+        </div>
+        <div class="modal-footer" style="text-align:center;">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="HideMessage()">OK</button>
+        </div>
+    </div>
+</div>

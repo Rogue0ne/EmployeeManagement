@@ -14,9 +14,37 @@ var app_common_services_1 = require("../shared/app.common.services");
 var AppHeaderComponent = (function () {
     function AppHeaderComponent(commonService) {
         this.commonService = commonService;
+        this.selected = false;
     }
+    AppHeaderComponent.prototype.showSelected = function () {
+        this.selected = !this.selected;
+    };
+    ;
     AppHeaderComponent.prototype.Logout = function () {
-        this.commonService;
+        var _this = this;
+        this.commonService
+            .Logout()
+            .then(function (resp) {
+            if (resp.Status === "Success") {
+                window.location.href = _this.commonService.configData["HomePage"];
+            }
+            else {
+                alert('Error occured in logout.');
+            }
+        });
+    };
+    ;
+    AppHeaderComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.commonService.GetAppSettings()
+            .then(function (resp) {
+            if (resp != null) {
+                _this.HomeUrl = resp.AppSettings[_this.commonService.configData["HomeUrl"]].SETTING_VALUE;
+            }
+            else {
+                _this.HomeUrl = '';
+            }
+        });
     };
     return AppHeaderComponent;
 }());

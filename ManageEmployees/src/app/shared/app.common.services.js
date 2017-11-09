@@ -30,6 +30,32 @@ var AppCommonServices = (function () {
         })
             .catch(this.handleError);
     };
+    AppCommonServices.prototype.GetConfigData = function () {
+        return this.http.get('./Config.json')
+            .toPromise()
+            .then(function (resposne) {
+            var data = resposne.json();
+            return data;
+        })
+            .catch(this.handleError);
+    };
+    ;
+    AppCommonServices.prototype.GetAppSettings = function () {
+        return this.http.get('api/GetApplicatinSettings')
+            .toPromise()
+            .then(function (response) {
+            var data = response.json();
+            return data;
+        })
+            .catch(this.handleError);
+    };
+    ;
+    AppCommonServices.prototype.handleError = function (error) {
+        //console.error('An error occured',error);
+        window.location.href = 'Home/Error?statusText=' + error.statusText;
+        return Promise.reject(error.message || error);
+    };
+    ;
     return AppCommonServices;
 }());
 AppCommonServices = __decorate([
