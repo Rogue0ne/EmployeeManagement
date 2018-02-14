@@ -106,6 +106,8 @@
     <Content Include="karma-test-shim.js" />
     <Content Include="karma.conf.js" />
     <Content Include="src\app\home\components\templates\home.html" />
+    <Content Include="src\app\locations\components\templates\location.html" />
+    <Content Include="src\app\login\components\templates\login.html" />
     <Content Include="src\app\shared\templates\app.breadcrumb.template.html" />
     <Content Include="src\app\shared\templates\app.footer.template.html" />
     <Content Include="src\app\shared\templates\app.header.template.html" />
@@ -133,6 +135,7 @@
     <TypeScriptCompile Include="src\app\home\components\home.component.ts" />
     <TypeScriptCompile Include="src\app\home\components\home.routing.module.ts" />
     <TypeScriptCompile Include="src\app\locations\components\location.component.ts" />
+    <TypeScriptCompile Include="src\app\login\components\login.component.ts" />
     <TypeScriptCompile Include="src\app\shared\app.breadcrumb.ts" />
     <TypeScriptCompile Include="src\app\shared\app.common.services.ts" />
     <TypeScriptCompile Include="src\app\shared\app.footer.component.ts" />
@@ -147,7 +150,6 @@
   <ItemGroup>
     <Folder Include="src\app\departments\components\templates\" />
     <Folder Include="src\app\employees\components\templates\" />
-    <Folder Include="src\app\locations\components\templates\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
