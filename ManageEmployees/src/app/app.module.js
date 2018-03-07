@@ -7,19 +7,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
 var platform_browser_1 = require("@angular/platform-browser");
+var animations_1 = require("@angular/platform-browser/animations");
 var home_component_1 = require("../app/home/components/home.component");
-var AppModule = (function () {
+var login_component_1 = require("../app/login/components/login.component");
+var not_found_component_1 = require("../app/shared/not-found.component");
+var AppModule = /** @class */ (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
+                animations_1.BrowserAnimationsModule,
+                home_component_1.HomeComponent
+            ],
+            declarations: [
+                home_component_1.HomeComponent,
+                login_component_1.LoginComponent,
+                not_found_component_1.PageNotFoundComponent
+            ],
+            bootstrap: [home_component_1.HomeComponent]
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [home_component_1.HomeComponent],
-        bootstrap: [home_component_1.HomeComponent]
-    })
-], AppModule);
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map

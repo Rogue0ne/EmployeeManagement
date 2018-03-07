@@ -25,7 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
     <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -136,11 +136,13 @@
     <TypeScriptCompile Include="src\app\home\components\home.routing.module.ts" />
     <TypeScriptCompile Include="src\app\locations\components\location.component.ts" />
     <TypeScriptCompile Include="src\app\login\components\login.component.ts" />
+    <TypeScriptCompile Include="src\app\login\components\login.routing.module.ts" />
     <TypeScriptCompile Include="src\app\shared\app.breadcrumb.ts" />
     <TypeScriptCompile Include="src\app\shared\app.common.services.ts" />
     <TypeScriptCompile Include="src\app\shared\app.footer.component.ts" />
     <TypeScriptCompile Include="src\app\shared\app.header.component.ts" />
     <TypeScriptCompile Include="src\app\shared\app.modal.message.component.ts" />
+    <TypeScriptCompile Include="src\app\shared\app.auth.service.ts" />
     <TypeScriptCompile Include="src\app\shared\not-found.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
